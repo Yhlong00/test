@@ -13,7 +13,10 @@ RUN . /app/.venv/bin/activate && \
         pydub \
         nest-asyncio \
         azure-storage-blob==12.23.1 
-RUN . /app/.venv/bin/activate && pip install --no-cache --no-build-isolation google-generativeai
+RUN /app/.venv/bin/pip install \
+    --no-cache-dir \
+    --no-build-isolation \
+    google-generativeai
 
 WORKDIR /app
 

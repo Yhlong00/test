@@ -6,15 +6,15 @@ RUN comfy node install --exit-on-fail comfyui-inspire-pack
 RUN comfy node install --exit-on-fail comfyui-impact-pack
 RUN comfy node install --exit-on-fail comfyui-save-file-extended
 RUN comfy node install --exit-on-fail comfyui-art-venture
-RUN comfy node install --exit-on-fail derfuu_comfyui_moddednodes
-RUN comfy node install --exit-on-fail comfyui_essentials
-RUN comfy node install --exit-on-fail comfyui_layerstyle
-RUN comfy node install --exit-on-fail comfyui_fizznodes
-RUN comfy node install --exit-on-fail comfyui_controlnet_aux
-RUN comfy node install --exit-on-fail comfyui-custom-scripts
-RUN comfy node install --exit-on-fail comfyui-inpaint-nodes
-RUN comfy node install --exit-on-fail efficiency-nodes-comfyui
-RUN comfy node install --exit-on-fail comfy-mtb
+# RUN comfy node install --exit-on-fail derfuu_comfyui_moddednodes
+# RUN comfy node install --exit-on-fail comfyui_essentials
+# RUN comfy node install --exit-on-fail comfyui_layerstyle
+# RUN comfy node install --exit-on-fail comfyui_fizznodes
+# RUN comfy node install --exit-on-fail comfyui_controlnet_aux
+# RUN comfy node install --exit-on-fail comfyui-custom-scripts
+# RUN comfy node install --exit-on-fail comfyui-inpaint-nodes
+# RUN comfy node install --exit-on-fail efficiency-nodes-comfyui
+# RUN comfy node install --exit-on-fail comfy-mtb
 
 # Comfyroll not in registry, install via git clone
 RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*

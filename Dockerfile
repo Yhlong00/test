@@ -12,8 +12,8 @@ RUN . /app/.venv/bin/activate && \
         runpod \
         pydub \
         nest-asyncio \
-        azure-storage-blob==12.23.1 \
-        google-generativeai  # ← THIS LINE ADDED
+        azure-storage-blob==12.23.1 
+RUN uv pip install --no-cache google-generativeai  # ← THIS LINE ADDED
 
 WORKDIR /app
 

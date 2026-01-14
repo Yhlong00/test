@@ -3,9 +3,9 @@ FROM runpod/worker-comfyui:5.5.1-base
 RUN comfy node install --exit-on-fail rgthree-comfy
 RUN comfy node install --exit-on-fail comfyui-florence2
 RUN comfy node install --exit-on-fail comfyui-inspire-pack
-RUN comfy node install --exit-on-fail comfyui-impact-pack
-RUN comfy node install --exit-on-fail comfyui-save-file-extended
-RUN comfy node install --exit-on-fail comfyui-art-venture
+# RUN comfy node install --exit-on-fail comfyui-impact-pack
+# RUN comfy node install --exit-on-fail comfyui-save-file-extended
+# RUN comfy node install --exit-on-fail comfyui-art-venture
 # RUN comfy node install --exit-on-fail derfuu_comfyui_moddednodes
 # RUN comfy node install --exit-on-fail comfyui_essentials
 # RUN comfy node install --exit-on-fail comfyui_layerstyle

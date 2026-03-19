@@ -1,4 +1,5 @@
 import os
+import asyncio
 from fastapi import FastAPI
 from pydantic import BaseModel
 
@@ -10,6 +11,7 @@ class GenerationRequest(BaseModel):
     prompt: str
     max_tokens: int = 100
     temperature: float = 0.7
+    sleep_seconds: int = 0
 
 class GenerationResponse(BaseModel):
     generated_text: str
@@ -28,10 +30,19 @@ async def generate(request: GenerationRequest):
     global request_count
     request_count += 1
 
-    print(f"Received request #{request_count} with prompt: {request.prompt}")
+    print(
+        f"Received request #{request_count} with prompt: {request.prompt}, "
+        f"sleeping for {request.sleep_seconds} seconds"
+    )
+
+    # Sleep for the requested number of seconds
+    await asyncio.sleep(request.sleep_seconds)
 
     # A simple mock implementation; replace with actual model later
-    generated_text = f"Response to: {request.prompt} (request #{request_count})"
+    generated_text = (
+        f"Response to: {request.prompt} "
+        f"(request #{request_count}, slept {request.sleep_seconds}s)"
+    )
 
     return {"generated_text": generated_text}
 
